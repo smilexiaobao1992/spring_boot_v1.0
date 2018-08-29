@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.thymeleaf.org" xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorator="base/layout1"><!-- layout文件路径-->
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>展示用户列表</title>
 </head>
 <body>
-<h1>展示用户列表</h1>
-<table class="table table-hover table-condensed">
+<div layout:fragment="content">
+    hello spring boot!
+</div>
+<!--<div>
+    <img src="https://alternative.me/crypto/fear-and-greed-index.png" alt="Latest Crypto Fear & Greed Index" />
+</div>-->
+<!--<table class="table table-hover table-condensed">
     <legend>
         <strong>用户列表</strong>
     </legend>
@@ -24,6 +30,7 @@
         <td th:text="${user.age}"></td>
     </tr>
     </tbody>
-</table>
+</table>-->
+
 </body>
 </html>

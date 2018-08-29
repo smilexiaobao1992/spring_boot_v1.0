@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+
 import com.example.demo.dao.UserMapper;
 import com.example.demo.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,7 +8,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,12 +19,12 @@ import java.util.List;
  * @Create Date : 2018/8/6
  */
 @Controller
-public class UserController {
+public class UserController{
 
     @Autowired
     UserMapper userMapper;
 
-    @RequestMapping("/user")
+    @RequestMapping(value = "/user", produces="text/plain;charset=UTF-8")
     public String getUser(ModelMap modelMap) {
         try {
             List<User> userList = userMapper.selectUserByName();

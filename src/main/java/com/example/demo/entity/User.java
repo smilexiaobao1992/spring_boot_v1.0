@@ -3,6 +3,8 @@ package com.example.demo.entity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+import java.io.Serializable;
+
 /**
  * @author : xujunbao
  * @ClassName com.example.demo.entity
@@ -11,7 +13,9 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class User {
+public class User implements Serializable{
+
+
     private Long id;
     private String username;
     private Long age;
